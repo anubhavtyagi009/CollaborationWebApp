@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<br>
+
+<div class="nav navbar-nav navbar-left">
+<a href="#/manage_users">Manage Users</a>  &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+<a href="#/manage_jobs">Manage Jobs</a>
+</div>
+
+<div class="container" ng-controller="UserController as ctrl">
+
+<div ng-repeat="user in ctrl.users">
+
+ <div class="row">
+   <div class="table-response">
+   <table class="table">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Date of Birth</th>							
+							<th>Mobile No</th>
+							<th>Gender</th>
+							<th>Address</th>
+							<th>Role</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+							<tr class="success">
+								<td>{{user.id}}</td>
+								<td>{{user.name}}</td>
+								<td>{{user.email}}</td>
+								<td>{{user.dob}}</td>
+								<td>{{user.mob_no}}</td>
+								<td>{{user.gender}}</td>
+								<td>{{user.address}}</td>
+								<td>{{user.role}}</td>
+								<td>{{user.status}}</td>								
+				<td><button type="button" ng-click="ctrl.useraccept({{user.id}})" class="btn btn-warning btn-sm">ACCEPT</button>
+				<!-- <button type="button" ng-click="ctrl.accept" class="btn btn-primary">ACCEPT</button></a></td> -->
+                                 <td><button type="button" class="btn btn-danger">REJECT</button></a></td>
+					</tr>
+</tbody>
+</table>
+   </div>
+ </div>
+
+
+</div>
+
+</div>
+
+</body>
+</html>
