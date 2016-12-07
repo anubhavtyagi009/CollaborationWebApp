@@ -1,0 +1,55 @@
+<div class="container" ng-controller="BlogController as ctrl">
+ 
+ <div ng-repeat="selectedBlog in ctrl.blogs">
+
+<div class="form-group">
+Title : <label> {{selectedBlog.title}} </label><br>
+Written BY : <label> {{selectedBlog.userID}} ,</label><br>
+Description : <label> {{selectedBlog.description}},</label><br>
+Date and Time : <label> {{selectedBlog.dateTime}}</label>
+
+<div class="row">
+<div class="form-group col-md-12">
+<form ng-submit="ctrl.addcomment()">
+
+<input type="text" ng-model="ctrl.blogcomment.bcomment" id="id" class="form-control input-sm" placeholder="Enter your comment"/>
+
+<button type="submit"  class="btn btn-warning btn-sm">Submit</button>
+</form>
+<!-- <form ng-submit="ctrl.addrating()">
+<span class="starRating">
+
+<input id="rating5" type="radio" name="ratings" value="5">
+ 
+ <label for="rating5">5</label>
+ 
+ <input id="rating4" type="radio" name="ratings" value="4">
+ 
+ <label for="rating4">4</label>
+ 
+ <input id="rating3" type="radio" name="ratings" value="3">
+ 
+ <label for="rating3">3</label>
+ 
+ <input id="rating2" type="radio" name="ratings" value="2">
+ 
+ <label for="rating2">2</label>
+ 
+ <input id="rating1" type="radio" name="ratings" value="1">
+ 
+ <label for="rating1">1</label>
+ <button type="submit"  class="btn btn-warning btn-sm">Submit rating</button>
+</span>
+</form> -->
+</div></div>
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
